@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity5&8_Arbie</title>
+
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Material Icons CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Custom CSS for styling -->
+    <style>
+        /* Custom styles for the fixed navbar */
+        .navbar-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #000000;
+            color: #fff;
+            margin-bottom: 40px; /* Add margin to the navbar */
+        }
+
+        /* Custom styles for the dropdown content */
+        .dropdown-content li > a, .dropdown-content li > span {
+            color: #333; /* Text color for dropdown items */
+        }
+
+        /* Custom styles for the logo */
+        .brand-logo {
+            font-family: 'Croissant One', sans-serif; /* Change the font-family */
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Custom styles for buttons */
+        .btn {
+            background-color: #2196F3; /* Button background color */
+            color: #fff; /* Button text color */
+        }
+
+        /* Custom styles for links */
+        a {
+            color: #2196F3; /* Link color */
+        }
+
+        /* Custom styles for the side nav */
+        .sidenav-trigger {
+            cursor: pointer;
+        }
+
+        /* Center align the h3 element */
+        h3 {
+            text-align: center;
+        }
+
+        /* Center align the paragraph */
+        p.center-align {
+            text-align: center;
+        }
+
+        /* Custom styles for the product cards */
+        .product-card {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Dropdown Structure for Desktop -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#">Clothing</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li class="divider"></li>
+        <li><span>More Categories (Non-clickable)</span></li>
+    </ul>
+
+    <!-- Dropdown Structure for Mobile -->
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#">Clothing</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li class="divider"></li>
+        <li><span>More Categories (Non-clickable)</span></li>
+    </ul>
+
+    <!-- Fixed Navbar -->
+    <nav class="navbar-fixed">
+        <div class="nav-wrapper">
+            <!-- Navbar Logo -->
+            <a href="#" class="brand-logo">WWW™</a>
+            <!-- Mobile Menu Trigger -->
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <!-- Desktop Menu -->
+            <ul id="nav-desktop" class="right hide-on-med-and-down">
+                <li><a href="#">Home</a></li>
+                <!-- Cart Icon -->
+                <li>
+                    <a href="#">
+                        <i class="material-icons">shopping_cart</i>
+                    </a>
+                </li>
+                <!-- Search Icon -->
+                <li>
+                    <a href="#">
+                        <i class="material-icons">search</i>
+                    </a>
+                </li>
+                <!-- Dropdown Trigger -->
+                <li>
+                    <a class="dropdown-trigger" href="#" data-target="dropdown1">
+                        Categories<i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Side Nav (Mobile) -->
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <!-- Dropdown Trigger -->
+        <li>
+            <a class="dropdown-trigger" href="#" data-target="dropdown2">
+                Categories<i class="material-icons right">arrow_drop_down</i>
+            </a>
+        </li>
+    </ul>
+    <br> <br>
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h3>Welcome to Willow, Whiskey, and Winter's world!</h3>
+            <p class="center-align">Where wagging tails and loving hearts are always in abundance!</p>
+            
+            <!-- Product Cards -->
+            <div class="row">
+                <!-- Product Card 1 -->
+                <div class="col s12 m6 l4 product-card">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://i.pinimg.com/564x/15/e6/8d/15e68d85c5e980883e58ab5bd55dc3fe.jpg" alt="Product 1">
+                            <span class="card-title">W1</span>
+                        </div>
+                        <div class="card-content">
+                            <p>W Circle</p>
+                            <p>Price: 99.99</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="btn waves-effect waves-light">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="col s12 m6 l4 product-card">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://i.pinimg.com/564x/07/e9/16/07e916bbb897a2d8ab471792ee540600.jpg" alt="Product 2">
+                            <span class="card-title">W2</span>
+                        </div>
+                        <div class="card-content">
+                            <p>W front and back</p>
+                            <p>Price: 99.99</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="btn waves-effect waves-light">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="col s12 m6 l4 product-card">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://i.pinimg.com/564x/4c/d8/2e/4cd82e76f50a5e834013b512ff7c1c29.jpg" alt="Product 3">
+                            <span class="card-title">W3</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Classic WWW</p>
+                            <p>Price: 99.99</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="btn waves-effect waves-light">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="col s12 m6 l4 product-card">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://i.pinimg.com/564x/06/c1/5a/06c15a6f008ac6ad2b9b00adc6b4dfb4.jpg" alt="Product 4">
+                            <span class="card-title">W4</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Another WWW Product</p>
+                            <p>Price: 99.99</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="btn waves-effect waves-light">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="col s12 m6 l4 product-card">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://i.pinimg.com/564x/44/7b/e3/447be307bf0a0171673a4f54430e2d2c.jpg" alt="Product 5">
+                            <span class="card-title">W5</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Yet Another WWW Product</p>
+                            <p>Price: 99.99</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="btn waves-effect waves-light">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="col s12 m6 l4 product-card">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://i.pinimg.com/564x/cc/3a/28/cc3a28b0f8ea6648d252354be7093738.jpg" alt="Product 6">
+                            <span class="card-title">W6</span>
+                        </div>
+                        <div class="card-content">
+                            <p>One More WWW Product</p>
+                            <p>Price: 99.99</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="btn waves-effect waves-light">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>All profits will be dedicated to providing for the needs and well-being of my beloved dog companions: Willow, Whiskey, and Winter. Every dollar earned will be used to ensure they have the best quality food, toys, healthcare, and a comfortable and happy life.</p>
+        </div>
+    </main>
+
+    <!-- Materialize JavaScript CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Initialize Sidenav and Dropdowns -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Sidenav
+            var sidenav = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenav);
+
+            // Initialize Dropdowns
+            var dropdown1 = document.getElementById('dropdown1');
+            var dropdown2 = document.getElementById('dropdown2');
+            M.Dropdown.init(dropdown1, {
+                coverTrigger: false,
+                constrainWidth: false,
+            });
+            M.Dropdown.init(dropdown2, {
+                coverTrigger: false,
+                constrainWidth: false,
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            &copy; 2023 WWW™ | Willow Whiskey Winter
+        </div>
+    </footer>
+</body>
+</html>

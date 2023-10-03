@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<ht lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity4_Arbie</title>
+
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Material Icons CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Custom CSS for styling -->
+    <style>
+        /* Custom styles for the side nav */
+        .sidenav-trigger {
+            cursor: pointer;
+        }
+
+        /* Custom styles for navbar links */
+        .navbar-link {
+            font-family: 'Anton', sans-serif;
+            font-size: 16px;
+        }
+
+        /* Custom styles for the slider container */
+        .slider-container {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        /* Custom styles for the slides */
+        .slider .slides img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Custom styles for the "DYKWYA" text */
+        .brand-logo.navbar-link {
+            font-family: 'Anton', sans-serif;
+            font-weight: bold;
+        }
+
+        /* Custom styles for the contact section */
+        .contact-section {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Custom styles for contact information */
+        .contact-info {
+            font-size: 20px;
+        }
+    </style>
+</head>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper black">
+            <!-- Navbar Logo -->
+            <a href="#" class="brand-logo navbar-link">DYKWYA</a>
+            <!-- Mobile Menu Trigger -->
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <!-- Desktop Menu -->
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" class="navbar-link">Home</a></li>
+                <li><a href="#" class="navbar-link">About</a></li>
+                <li><a href="#" class="navbar-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Side Nav (Mobile) -->
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="#" class="navbar-link">Home</a></li>
+        <li><a href="#" class="navbar-link">About</a></li>
+        <li><a href="#" class="navbar-link">Contact</a></li>
+    </ul>
+
+    <!-- Slider -->
+    <div class="slider-container">
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="https://i.pinimg.com/564x/17/0f/3e/170f3e742caa4c6af7c3146a6d35a7eb.jpg" alt="Slider Image 1">
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/564x/1e/f6/32/1ef632e6823d37294ad439143c2595c5.jpg" alt="Slider Image 2">
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/originals/07/e6/2d/07e62d47cf3d58b09505b6280bfad9c1.jpg" alt="Slider Image 3">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <h3 class="center-align">About Us</h3>
+            <div class="row">
+                <div class="col s12 m6">
+                    <p>"Understanding who you are is a vital step on the path to mental well-being. It's like the compass that guides you through life's challenges. Take time to explore your thoughts, emotions, and experiences. Seek support from trusted friends, family, or professionals when needed. Embrace self-discovery as a journey towards self-acceptance and mental resilience. Remember, knowing yourself is the first step to nurturing your mental health."</p>
+                </div>
+                <div class="col s12 m6">
+                    <p>"Finding out who you are is a powerful tool for your mental health toolkit. It's like a mirror reflecting your inner world. Don't be afraid to look within, examine your feelings, and ask for help when necessary. Embrace the journey of self-discovery as a way to build a strong foundation for your mental well-being. Knowing yourself is not just a question, but a path to healing and self-empowerment."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <h3>Contact Us</h3>
+            <p class="contact-info">Email: dykwyacontact@example.com</p>
+            <p class="contact-info">Phone: +1 (123) 456-7890</p>
+        </div>
+    </section>
+
+    <!-- Materialize JavaScript CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Initialize Sidenav -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var sidenav = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenav);
+        });
+
+        // Initialize the Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            var slider = document.querySelectorAll('.slider');
+            M.Slider.init(slider, {
+                indicators: true,  // Display slide indicators
+                interval: 5000,    // Slide interval in milliseconds
+                height: 400,       // Slider height
+                transition: 500,  // Transition duration in milliseconds
+            });
+        });
+    </script>
+    <!-- Footer -->
+    <footer class="black white-text center-align">
+    <div class="container">
+        &copy; 2023 DYKWYA| Arbie<3
+    </div>
+</footer>
+</body>
+</html>

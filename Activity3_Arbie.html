@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity3_Arbie</title>
+
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Custom CSS for styling -->
+    <style>
+        /* Body and container styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0B0B45;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: #0B0B45;
+            position: fixed;
+        }
+
+        nav .brand-logo {
+            margin-left: 20px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        main {
+            padding-top: 70px;
+            width: 80%;
+        }
+
+        .subscription-list {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .subscription-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .subscription-list th,
+        .subscription-list td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .subscription-list th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .slider-container {
+            background-color: #000;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .slider {
+            width: 100%;
+        }
+
+        .slider .slides {
+            background-color: #000000;
+        }
+
+        .slider .slides li img {
+            max-height: 400px;
+        }
+
+        .movie-list {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .movie-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .movie-list th,
+        .movie-list td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .movie-list th {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .video-container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-wrapper indigo darken-4">
+                <a href="#" class="brand-logo">Disney+</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Main Picture -->
+        <div class="main-picture"></div>
+
+        <!-- Slider -->
+        <div class="slider-container">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="https://assetsio.reedpopcdn.com/disney-plus_IAYaFKg.JPG?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" alt="Slider Image 1">
+                    </li>
+                    <li>
+                        <img src="https://www.knowyourmobile.com/wp-content/uploads/2020/03/Disney-100-Worth-It-e1625227090274.jpg" alt="Slider Image 2">
+                    </li>
+                    <li>
+                        <img src="https://cdn.vox-cdn.com/thumbor/vFmISQTz-yG_sM4JvOjy6C_5fN4=/0x0:1900x778/1400x788/filters:focal(950x389:951x390)/cdn.vox-cdn.com/uploads/chorus_asset/file/22162947/disney_plus.jpeg" alt="Slider Image 3">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Subscription List Table -->
+        <div class="subscription-list">
+            <h2>Choose a Plan</h2>
+            <tr>Stream 4 screens at once. Create up to 7 profiles. Stream in Ultra HD 4K.</tr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Monthly Price</th>
+                        <th>Number of Screens</th>
+                        <th>Resolution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic</td>
+                        <td>₱400</td>
+                        <td>1</td>
+                        <td>SD</td>
+                    </tr>
+                    <tr>
+                        <td>Standard</td>
+                        <td>₱600</td>
+                        <td>2</td>
+                        <td>HD</td>
+                    </tr>
+                    <tr>
+                        <td>Premium</td>
+                        <td>₱700</td>
+                        <td>4</td>
+                        <td>Ultra HD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+
+        <!-- Video -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wBwpsFUWdGE" title="Mickey Mouse" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <!-- Movie List -->
+        <div class="movie-list">
+            <h2>Popular Movies</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Movie</th>
+                        <th>Release Year</th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Lion King</td>
+                        <td>1994</td>
+                        <td>Animation</td>
+                    </tr>
+                    <tr>
+                        <td>Aladdin</td>
+                        <td>1992</td>
+                        <td>Animation</td>
+                    </tr>
+                    <tr>
+                        <td>Frozen</td>
+                        <td>2013</td>
+                        <td>Animation</td>
+                    </tr>
+                    <tr>
+                        <td>Toy Story</td>
+                        <td>1995</td>
+                        <td>Animation</td>
+                    </tr>
+                    <tr>
+                        <td>Moana</td>
+                        <td>2016</td>
+                        <td>Animation</td>
+                    </tr>
+                    <tr>
+                        <td>Beauty and the Beast</td>
+                        <td>1991</td>
+                        <td>Animation</td>
+                    </tr>
+                    <tr>
+                        <td>Finding Nemo</td>
+                        <td>2003</td>
+                        <td>Animation</td>
+                    </tr>
+                    <tr>
+                        <td>Coco</td>
+                        <td>2017</td>
+                        <td>Animation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="indigo darken-4 white-text center-align">
+        &copy; 2023 Disney, Inc. | Arbie<3
+    </footer>
+
+    <!-- Materialize JavaScript CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        // Initialize the Material Box
+        document.addEventListener('DOMContentLoaded', function() {
+            var materialBox = document.querySelectorAll('.materialboxed');
+            M.Materialbox.init(materialBox);
+        });
+
+        // Initialize the Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            var slider = document.querySelectorAll('.slider');
+            M.Slider.init(slider, {
+                indicators: true,  // Display slide indicators
+                interval: 5000,    // Slide interval in milliseconds
+                height: 400,       // Slider height
+                transition: 500,  // Transition duration in milliseconds
+                duration: 1000     // Duration of the image transition in milliseconds
+            });
+        });
+    </script>
+</body>
+</html>
