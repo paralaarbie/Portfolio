@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Portfolio</title>
+
+    <!-- links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        /* Reset some default styles */
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Define basic styles */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Custom styles for the fixed navbar */
+        .navbar-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #EA028A;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* Style for the logo */
+        .logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: #fff;
+            font-family: "Times New Roman", Times, serif;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-family: "Times New Roman", Times, serif;
+            color: #333;
+        }
+
+        /* Navbar link styles */
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-links li {
+            margin: 0;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            font-family: "Times New Roman", Times, serif;
+            letter-spacing: 1px;
+        }
+
+        .navbar-links a:hover {
+            color: #200986;
+        }
+
+        /* Custom styles for the dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f709a7;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ff68d2;
+            color: #000000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Custom styles for icons */
+        .icon {
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        a.btn {
+            color: #fd1073;
+        }
+
+        a.btn {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Custom styles for project cards */
+        .project-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .project-card {
+            flex: 1;
+            max-width: calc(50% - 20px);
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 16px;
+        }
+
+        h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 36px;
+            color: #fd1187;
+            text-align: center;
+        }
+
+        .sidenav-trigger {
+            display: none;
+        }
+
+        .sidenav li a i{
+            color: #EA028A;
+        }
+
+        .sidenav li a{
+            color: #EA028A;
+        }
+
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: row;
+                text-align: center;
+            }
+
+            .navbar-links {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .navbar-links li {
+                margin: 10px 0;
+            }
+
+            .navbar-links {
+                display: none;
+                width: 100%;
+                background-color: #EA028A;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                text-align: center;
+                z-index: 1;
+            }
+
+            .navbar-links.active {
+                display: flex;
+            }
+            .sidenav-trigger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://i.pinimg.com/564x/0f/4a/83/0f4a83c8b702f2fba5778485fe312135.jpg" alt="Logo">
+            </a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i
+                    class="material-icons white-text">menu</i></a>
+            <ul class="navbar-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li class="dropdown">
+                    <a class='dropdown-trigger' href='#' data-target='dropdown1'>Contact</a>
+                    <ul class="dropdown-content" id='dropdown1'>
+                        <li>
+                            <a href="https://www.facebook.com/arbie.parala" target="_blank"><i
+                                    class="fab fa-facebook icon"></i>Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/_arbieeee/" target="_blank"><i
+                                    class="fab fa-instagram icon"></i>Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/parala-arbie/" target="_blank"><i
+                                    class="fab fa-linkedin icon"></i>LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/paralaarbie" target="_blank"><i
+                                    class="fab fa-github icon"></i>GitHub</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <ul id="slide-out" class="sidenav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li>
+            <a href="https://www.facebook.com/arbie.parala" target="_blank"><i
+                    class="fab fa-facebook icon"></i>Facebook</a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/_arbieeee/" target="_blank"><i
+                    class="fab fa-instagram icon"></i>Instagram</a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/parala-arbie/" target="_blank"><i
+                    class="fab fa-linkedin icon"></i>LinkedIn</a>
+        </li>
+        <li>
+            <a href="https://github.com/paralaarbie" target="_blank"><i class="fab fa-github icon"></i>GitHub</a>
+        </li>
+    </ul>
+
+    <section id="home">
+        <br><br><br>
+        <div id="about" class="container">
+            <div class="row">
+
+                <div class="col s12 m6 l6">
+                    <img src="https://i.pinimg.com/564x/d9/1d/ce/d91dce1aede551dbf68a747c40675436.jpg" alt=""
+                        style="border: solid 5px whitesmoke; border-radius: 50%; margin: 10% 0% 10%;"
+                        class="responsive-img">
+                </div>
+                <br><br>
+                <div class="col s12 m6 l6">
+                    <h2 class="" style="font-family: 'Italiana', serif;">
+                        hola, i am<br>
+                        <span class="pink-text"
+                            style="font-family: 'Lobster', serif; font-style: cursive; font-size: 200%;">Arbie Parala
+                    </h2>
+
+                </div>
+            </div>
+
+        </div>
+        <section id="about">
+            <div class="content">
+                <h2>About</h2>
+                <p>
+                    Welcome to my evolving portfolio, where my journey as an aspiring web designer unfolds. I'm a
+                    passionate and dedicated web enthusiast who's embarked on a mission to craft visually captivating
+                    and user-centric websites. With every project I take on, I strive not only to create aesthetically
+                    pleasing designs but also to establish meaningful connections between users and digital interfaces.
+                    My design path is marked by a thirst for knowledge and a commitment to mastering the latest design
+                    tools and trends. Each day brings a new opportunity to experiment, learn, and grow in this
+                    ever-evolving field. My ultimate goal is to weave together the threads of creativity and
+                    functionality to craft web experiences that leave a lasting impact. I invite you to explore my work
+                    and share in the excitement of my journey toward becoming a seasoned web designer.
+                </p>
+                <br>
+                <h1>Check out my resume</h1>
+                <a href="https://docs.google.com/document/d/1VrH1OMzz4f2IpPnYe67fzD3zLC0KYm3_/edit?usp=sharing&ouid=100459388156394097080&rtpof=true&sd=true"
+                    class="btn" target="_blank">Click Here</a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="content">
+                <h2>Projects</h2>
+                <div class="project-cards-container">
+                    <div class="project-card">
+                        <h3>Project 1</h3>
+                        <img src="https://i.pinimg.com/564x/d2/db/fb/d2dbfbbca8d0fa94678a857ecb75f932.jpg"
+                            alt="Project 1" style="width: 100%; height: auto;">
+                        <p>Colors and Typography</p>
+                        <a href="file:///C:/Users/Abie/Desktop/New%20folder/Activity1_Arbie.html" class="btn"
+                            target="_blank">Learn More</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Project 2</h3>
+                        <img src="https://i.pinimg.com/564x/e1/fc/2e/e1fc2ededb9ee617954aa20c1855425a.jpg"
+                            alt="Project 2" style="width: 100%; height: auto;">
+                        <p>(Media) Material Box, Slider with initialization and Option</p>
+                        <a href="file:///C:/Users/Abie/Desktop/New%20folder/Activity3_Arbie.html" class="btn"
+                            target="_blank">Learn More</a>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card">
+                        <h3>Project 3</h3>
+                        <img src="https://i.pinimg.com/564x/a0/0b/6a/a00b6ad0cf6d39cc8f69030a1c6fd138.jpg"
+                            alt="Project 3" style="width: 100%; height: auto;">
+                        <p>Navbar & Sidenav</p>
+                        <a href="file:///C:/Users/Abie/Desktop/New%20folder/Activity4_Arbie.html" class="btn"
+                            target="_blank">Learn More</a>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card">
+                        <h3>Project 4</h3>
+                        <img src="https://i.pinimg.com/564x/2a/4d/a4/2a4da4c482a5c74acd0061a5ce0bf688.jpg"
+                            alt="Project 4" style="width: 100%; height: auto;">
+                        <p>Buttons, Grid System & Cards</p>
+                        <!-- href="Link kapag naka deploy na" -->
+                        <a href="file:///C:/Users/Abie/Desktop/New%20folder/Activity5&8_Arbie.html" class="btn"
+                            target="_blank">Learn More</a>
+                    </div>
+
+        </section>
+
+        <section id="contact">
+            <div class="content">
+                <h2>Ready to start a project or have questions?</h2>
+                <p>
+                    Feel free to reach out to me at <a href="mailto:paralaarbie90@email.com">paralaarbie90@gmail.com</a>
+                </p>
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.dropdown-trigger').dropdown();
+                $('.sidenav').sidenav();
+            });
+        </script>
+</body>
+
+</html>
